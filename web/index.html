@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#081327">
+  <meta name="description" content="ChatConnect: connect once using a unique ChatConnect ID, message accepted friends privately, and keep personal notes.">
+  <title>ChatConnect · Stay Connected With Your People</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="background" aria-hidden="true"><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div></div>
+  <main id="entry" class="shell">
+    <div class="entry-layout">
+      <header class="entry-header">
+        <div class="entry-brand">
+          <svg viewBox="0 0 60 52" aria-hidden="true" fill="none"><path d="M4 6h34a6 6 0 0 1 6 6v21a6 6 0 0 1-6 6H18L8 47v-8H4a5 5 0 0 1-5-5V11a5 5 0 0 1 5-5Z" stroke="#fff4e3" stroke-width="3" transform="translate(3 0)"/><path d="M24 21h28a5 5 0 0 1 5 5v12a5 5 0 0 1-5 5h-3v6l-8-6H24a5 5 0 0 1-5-5V26a5 5 0 0 1 5-5Z" fill="#081327" stroke="#ff821f" stroke-width="3"/><circle cx="29" cy="32" r="2" fill="#ff821f"/><circle cx="38" cy="32" r="2" fill="#ff821f"/><circle cx="47" cy="32" r="2" fill="#ff821f"/></svg>
+          <span>Chat<span>Connect</span></span>
+        </div>
+        <p class="entry-nav" aria-label="ChatConnect values">CHAT <i>•</i> CONNECT <i>•</i> COLLABORATE <i>•</i> COMMUNITY</p>
+        <span class="entry-label">CAMPUS FRIENDS SPACE</span>
+      </header>
+      <div class="entry-columns">
+        <section class="entry-story" aria-labelledby="hero-heading">
+          <p class="eyebrow">A MODERN REAL-TIME CHAT PLATFORM</p>
+          <h1 id="hero-heading">Stay Connected<br>With Your <em>People</em></h1>
+          <p class="entry-description">A beautiful place for direct conversations and private notes — with classmates, friends and project teams.</p>
+          <div class="feature-strip" aria-label="ChatConnect features">
+            <div class="feature"><span class="feature-emoji" aria-hidden="true">⚡</span><span>Real-Time<br>Messaging</span></div>
+            <div class="feature"><span class="feature-emoji" aria-hidden="true">👥</span><span>Unique IDs &amp;<br>Friends</span></div>
+            <div class="feature"><span class="feature-emoji" aria-hidden="true">🛡️</span><span>Private<br>Chats</span></div>
+            <div class="feature"><span class="feature-emoji" aria-hidden="true">💻</span><span>Browser<br>Access</span></div>
+          </div>
+          <div class="friends-scenery" role="img" aria-label="Two women and two men enjoying a glowing horizon together"><span class="scene-credit">The best conversations bring us closer.</span></div>
+        </section>
+        <section class="login-card" aria-labelledby="login-heading">
+          <div class="blossoms" aria-hidden="true"></div>
+          <div class="login-card-inner">
+            <div class="login-mark"><span class="login-mark-icon" aria-hidden="true">💬</span> Chat<span>Connect</span></div>
+            <h2 id="login-heading">Welcome Back <span aria-hidden="true">👋</span></h2>
+            <p class="login-intro" id="login-intro">Your people. Your conversations. Your account.</p>
+            <div class="auth-tabs" role="group" aria-label="Choose sign in or sign up">
+              <button id="tabLogin" class="auth-tab active" type="button" aria-pressed="true">Sign In</button>
+              <button id="tabSignup" class="auth-tab" type="button" aria-pressed="false">Create Account</button>
+            </div>
+            <form id="authForm">
+              <div class="field signup-only" hidden>
+                <label for="name">YOUR USERNAME</label>
+                <div class="field-wrap">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg>
+                  <input id="name" name="name" minlength="3" maxlength="24" pattern="[A-Za-z0-9_]{3,24}" autocomplete="username" placeholder="Your unique username" disabled>
+                </div>
+                <p class="field-hint">3–24 letters, numbers or underscores.</p>
+              </div>
+              <div class="field signup-only" hidden>
+                <label for="email">EMAIL ADDRESS</label>
+                <div class="field-wrap">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/></svg>
+                  <input id="email" name="email" type="email" maxlength="254" autocomplete="email" placeholder="you@example.com" disabled>
+                </div>
+              </div>
+              <div class="field signin-only">
+                <label for="identity">USERNAME OR EMAIL</label>
+                <div class="field-wrap">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg>
+                  <input id="identity" name="identity" maxlength="254" required autocomplete="username" placeholder="Enter username or email">
+                </div>
+              </div>
+              <div class="field">
+                <label for="password">PASSWORD</label>
+                <div class="field-wrap">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                  <input id="password" name="password" type="password" minlength="10" maxlength="128" required autocomplete="current-password" placeholder="Enter your password">
+                  <button class="reveal-key" id="revealKey" type="button" aria-label="Show password" aria-pressed="false">Show</button>
+                </div>
+                <p class="field-hint" id="passwordHint">Your private account password — no room key needed.</p>
+              </div>
+              <div class="field signup-only" hidden>
+                <label for="confirmPassword">CONFIRM PASSWORD</label>
+                <div class="field-wrap">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                  <input id="confirmPassword" type="password" minlength="10" maxlength="128" autocomplete="new-password" placeholder="Repeat your password" disabled>
+                </div>
+              </div>
+              <p id="joinError" role="alert" aria-live="polite"></p>
+              <button class="submit" id="authSubmit" type="submit"><span aria-hidden="true">➜</span> Sign In &amp; Chat</button>
+            </form>
+            <div class="login-divider"><span></span><small>GOOD TALKS. GREAT FRIENDS.</small><span></span></div>
+            <div class="login-highlights"><span>● Live messages</span><span>● Private notes</span><span>● Private chats</span></div>
+            <p class="login-footnote">Real user accounts · Password-protected messaging · Docker + PostgreSQL</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <div id="newMessageToast" class="message-toast" role="status" aria-live="polite" hidden></div>
+  <main id="chat" hidden>
+    <aside id="ccv3Sidebar">
+      <div class="brand"><i aria-hidden="true">↗</i> ChatConnect</div>
+      <div class="theme-switch-row"><button id="themeSwitch" type="button">🌇 Sunset theme</button><span>CHOOSE YOUR CHAT LOOK</span></div><button id="ccThemeStudioOpen" type="button" class="cc-theme-launch">🎨 Theme Studio · 11 new looks</button>
+      <nav>
+        <section class="my-id-card" aria-label="Your permanent ChatConnect ID">
+          <small>YOUR UNIQUE CHATCONNECT ID</small>
+          <div class="my-id-row"><strong id="myPublicId">Loading…</strong><button id="copyId" type="button" title="Copy your ChatConnect ID">Copy</button></div>
+          <p>Share this ID directly with the correct person. A request needs their approval.</p>
+        </section>
+        <section class="connect-box" aria-label="Connect with a friend">
+          <small>CONNECT USING FRIEND ID</small>
+          <form id="connectForm">
+            <input id="friendId" aria-label="Friend ChatConnect ID" type="text" maxlength="19" autocomplete="off" placeholder="CC-0123456789ABCDEF" required pattern="[Cc][Cc]-[A-Fa-f0-9]{16}">
+            <button id="connectSubmit" type="submit">Request ↗</button>
+          </form>
+          <p id="connectFeedback" role="status" aria-live="polite"></p>
+        </section>
+        <section class="request-box" aria-label="Friend requests">
+          <small>FRIEND REQUESTS <span id="requestBadge" class="unread" hidden></span></small>
+          <div id="incomingRequests"></div>
+          <div id="outgoingRequests"></div>
+        </section>
+        <small>YOUR PRIVATE SPACE</small>
+        <button id="room">🔒 &nbsp; My notes <span id="roomCount" class="unread" hidden></span></button>
+        <section class="cc-groups-sidebar" aria-label="Private groups">
+          <div class="cc-group-heading"><small>PRIVATE GROUPS <span id="groupInviteCount" class="unread" hidden></span></small>
+          <button id="groupCreateOpen" type="button" title="Create a private group">+ Create</button></div>
+          <div id="groupInvites" aria-live="polite"></div><div id="groupList"></div>
+        </section>
+        <small>CONNECTED FRIENDS ONLY</small>
+        <input id="searchPeople" type="search" placeholder="Search your friends..." aria-label="Search connected friends">
+        <div id="people"></div>
+        <section class="blocked-box" aria-label="Blocked accounts">
+          <small>BLOCKED ACCOUNTS</small>
+          <div id="blockedPeople"></div>
+        </section>
+      </nav>
+      <footer><strong id="me"></strong><button id="profileOpen" type="button" title="Edit your profile">👤 Profile</button><button id="leave">Log Out</button></footer>
+    </aside>
+<section class="thread"><header class="ccv3-head"><div class="ccv3-left"><button id="ccv3SidebarToggle" type="button" aria-controls="ccv3Sidebar" aria-expanded="true" aria-label="Hide chats sidebar">&#9776; Focus</button><div class="ccv3-title-stack"><small id="channelType">ONLY YOU CAN SEE THESE NOTES</small><h2 id="title">My private notes</h2></div><div id="ccv3Calls"></div></div><div class="ccv3-meta"><div id="ccv3Status"></div><div id="ccv3Secondary"></div></div><div class="head-actions"><span id="status" role="status">Connecting</span><span id="groupMuteStatus" class="cc-group-muted-label" hidden>🔕 Group muted</span><span id="ccWallpaperStatus" class="cc-wallpaper-status" hidden>🎨 Shared wallpaper</span><button id="ccChatWallpaperOpen" type="button" class="cc-wallpaper-open" hidden>🖼️ Wallpaper</button><button id="groupManageOpen" type="button" hidden>👥 Group info</button><button id="friendProfileOpen" type="button" title="View connected friend profile" hidden>👤 Friend profile</button><button id="alertsToggle" type="button" aria-pressed="false" title="Enable desktop notifications">🔕 Enable alerts</button><button id="ccSearchOpen" type="button" class="cc-search-open" title="Search messages across your private chats, groups, or notes" aria-label="Search messages">🔎 Search</button><button id="export" title="Download this conversation" type="button">↓ Export</button></div></header><div id="feed" aria-label="Conversation"></div><p id="typing" role="status" aria-live="polite"></p><div id="ccReplyBar" class="cc-reply-bar" hidden><span class="cc-reply-icon">↩</span><div class="cc-reply-content"><strong id="ccReplyName">Reply</strong><span id="ccReplySnippet"></span></div><button id="ccReplyCancel" type="button" aria-label="Cancel reply">✕</button></div><section id="ccVoicePanel" class="cc-voice-panel" hidden aria-label="Voice note recorder">
+  <span id="ccVoiceStatus" class="cc-voice-status" role="status" aria-live="polite">🎙️ Ready</span>
+  <audio id="ccVoicePreview" controls preload="none" hidden aria-label="Review voice note"></audio>
+  <button id="ccVoiceStop" type="button" hidden>■ Stop</button>
+  <button id="ccVoiceSend" type="button" hidden>↗ Send voice</button>
+  <button id="ccVoiceDiscard" type="button">✕ Discard</button>
+</section>
+<section id="ccEmojiPanel" class="cc-emoji-panel" hidden aria-label="Emoji keyboard">
+  <header class="cc-emoji-header"><strong>😄 Emoji keyboard</strong><input id="ccEmojiSearch" type="search" placeholder="Search 3,500+ emojis…" aria-label="Search emoji"><button id="ccEmojiClose" type="button" title="Close emoji keyboard" aria-label="Close emoji keyboard">✕</button></header>
+  <div id="ccEmojiTabs" class="cc-emoji-tabs" aria-label="Emoji categories"></div>
+  <div id="ccEmojiGrid" class="cc-emoji-grid" aria-label="Choose an emoji"></div>
+  <footer class="cc-emoji-footer"><span id="ccEmojiCount"></span><button id="ccEmojiMore" type="button" hidden>Show more ↓</button></footer>
+</section>
+<form id="compose"><button id="attachButton" class="cc-attach-open" type="button" title="Send photo or file (up to 300 MB)" aria-label="Attach photo or file">📎</button><input id="attachmentPicker" class="cc-attachment-picker" type="file" accept=".jpg,.jpeg,.png,.webp,.pdf,.txt,.docx,.xlsx,.pptx" aria-label="Select attachment" hidden><button id="ccEmojiButton" type="button" class="cc-toolbar-button" title="Open full emoji keyboard" aria-label="Open emoji keyboard">😄</button><button id="ccVoiceButton" type="button" class="cc-toolbar-button" title="Record voice message" aria-label="Record voice message">🎙️</button><input id="draft" maxlength="2000" aria-label="Message" autocomplete="off" placeholder="Write a message…" required><button aria-label="Send message">Send ↗</button></form><p id="sendError" role="alert"></p></section></main>
+  <dialog id="ccThemeDialog" class="cc-theme-dialog" aria-labelledby="ccThemeHeading">
+    <div class="cc-theme-studio">
+      <header class="cc-theme-head"><div><small>CHATCONNECT PERSONALIZATION STUDIO</small><h2 id="ccThemeHeading">🎨 Your own Theme Studio</h2><p>Make every conversation feel like yours.</p></div><button type="button" id="ccThemeClose" aria-label="Close Theme Studio">✕</button></header>
+      <div class="cc-theme-tabs" role="group" aria-label="Theme scope"><button id="ccThemeGlobal" type="button" aria-pressed="true">🌈 My Global Theme</button><button id="ccThemeChat" type="button" aria-pressed="false">💬 This Chat (Both Friends)</button></div>
+      <p class="cc-theme-notice" id="ccThemeScopeNotice"></p>
+      <label class="cc-theme-search-label" for="ccThemeSearch">Explore your wallpapers</label>
+      <input id="ccThemeSearch" type="search" placeholder="Search clouds, cats, hearts…" autocomplete="off" aria-label="Search themes">
+      <div class="cc-theme-layout"><div class="cc-theme-gallery"><div id="ccThemeCards" class="cc-theme-cards"></div><p id="ccThemeEmpty" hidden>No themes match your search.</p></div>
+        <aside class="cc-theme-preview-shell"><strong>✨ Live preview</strong><div id="ccThemePreview" class="cc-theme-preview"><span class="cc-preview-title" id="ccThemePreviewLabel">Doodle Blue</span><div class="cc-preview-bubble">Hey! This looks beautiful ✨</div><div class="cc-preview-bubble mine">Our own chat wallpaper! 💜</div><div class="cc-preview-bubble">I love it 😍</div></div><button id="ccThemeApply" type="button">✓ Apply Theme</button><button id="ccThemeReset" type="button" hidden>↺ Clear Shared Wallpaper</button><p id="ccThemeFeedback" role="alert" aria-live="polite"></p><small>🔐 Shared chat changes update both accounts. Personal themes stay private.</small></aside>
+      </div>
+    </div>
+  </dialog>
+  <dialog id="ccSearchDialog" class="cc-search-dialog" aria-labelledby="ccSearchHeading">
+  <div class="cc-search-shell">
+    <header class="cc-search-top"><div><small>PRIVATE MESSAGE FINDER</small><h2 id="ccSearchHeading">🔎 Search conversations</h2></div><button id="ccSearchClose" type="button" aria-label="Close search" title="Close (Esc)">✕</button></header>
+    <label for="ccSearchInput">Search messages and filenames</label>
+    <input id="ccSearchInput" type="search" maxlength="160" placeholder="Type a word or emoji…" autocomplete="off" spellcheck="false" aria-label="Search conversation messages">
+    <div class="cc-search-scopes" role="group" aria-label="Search scope">
+      <button id="ccSearchCurrent" type="button" aria-pressed="true">This chat</button>
+      <button id="ccSearchAll" type="button" aria-pressed="false">All my chats</button>
+    </div>
+    <p id="ccSearchStatus" class="cc-search-status" role="status" aria-live="polite">Find text and filenames, including older messages. 🔐</p>
+    <div id="ccSearchResults" class="cc-search-results" aria-label="Search results"></div>
+    <p class="cc-search-tip">Only messages you can currently access are searchable. Deleted, hidden and inaccessible group messages stay private. 🔒</p>
+  </div>
+</dialog>
+  <dialog id="profileDialog" class="cc-profile-dialog" aria-labelledby="profileHeading">
+    <form id="profileForm">
+      <header class="cc-profile-head"><div><small>YOUR PERSONAL SPACE</small><h2 id="profileHeading">Edit profile</h2></div><button type="button" class="cc-profile-close" id="profileClose" aria-label="Close profile">✕</button></header>
+      <div class="cc-profile-preview"><span class="cc-avatar theme-cobalt" id="profileAvatar">CC</span><div><strong id="profilePreviewName">Your name</strong><small id="profileUsername">@username</small><small id="profilePermanentId">CC-...</small></div></div>
+      <label for="profileDisplayName">Display name <small>(username stays unique)</small></label>
+      <input id="profileDisplayName" name="display_name" type="text" minlength="2" maxlength="48" required autocomplete="nickname" placeholder="How friends see your name">
+      <label for="profileBio">About you <small>(optional · max 160 bytes)</small></label>
+      <textarea id="profileBio" name="bio" rows="3" maxlength="160" placeholder="A little about yourself…"></textarea>
+      <label for="profileColor">Profile color</label>
+      <select id="profileColor" name="avatar_theme"><option value="cobalt">💙 Cobalt</option><option value="sunset">🧡 Sunset</option><option value="mint">💚 Mint</option><option value="violet">💜 Violet</option><option value="rose">🩷 Rose</option></select>
+      <p id="profileFeedback" role="status" aria-live="polite"></p>
+      <button id="profileSave" type="submit" class="cc-profile-save">Save profile</button>
+    </form>
+  </dialog>
+  <dialog id="friendProfileDialog" class="cc-profile-dialog" aria-labelledby="friendProfileHeading">
+    <div class="cc-profile-head"><div><small>CONNECTED FRIEND</small><h2 id="friendProfileHeading">Friend profile</h2></div><button id="friendProfileClose" type="button" class="cc-profile-close" aria-label="Close friend profile">✕</button></div>
+    <div class="cc-profile-preview"><span id="friendProfileAvatar" class="cc-avatar theme-cobalt">CC</span><div><strong id="friendProfileDisplayName"></strong><small id="friendProfileUsername"></small><small id="friendProfileId"></small></div></div>
+    <div class="cc-profile-bio"><small>ABOUT</small><p id="friendProfileBio"></p></div>
+    <div class="friend-safety-actions" aria-label="Friend privacy and notification controls">
+      <small>FRIEND CONTROLS</small>
+      <button id="friendMute" type="button">🔕 Mute alerts</button>
+      <button id="friendRemove" type="button">🤝 Remove friend</button>
+      <button id="friendBlock" type="button" class="danger-action">🚫 Block account</button>
+      <p id="friendSafetyFeedback" role="alert" aria-live="polite"></p>
+      <p class="safety-hint">Block ends the friendship and prevents future contact. Unblocking does not automatically reconnect you. Mute stops popups, not unread counts.</p>
+    </div>
+  </dialog>
+  <dialog id="groupCreateDialog" class="cc-profile-dialog cc-group-dialog" aria-labelledby="groupCreateHeading">
+    <form id="groupCreateForm">
+      <header class="cc-profile-head"><div><small>INVITE-ONLY CONVERSATIONS</small><h2 id="groupCreateHeading">Create private group 👥</h2></div><button id="groupCreateClose" type="button" class="cc-profile-close" aria-label="Close">✕</button></header>
+      <label for="groupName">Group name</label>
+      <input id="groupName" maxlength="64" minlength="3" required placeholder="e.g. Semester Project Team">
+      <label>Invite connected friends <small>(they must accept)</small></label>
+      <div id="groupCreateFriends" class="cc-group-choices"></div>
+      <p id="groupCreateFeedback" role="alert"></p>
+      <button id="groupCreateSave" type="submit" class="cc-profile-save">Create group &amp; send invitations</button>
+      <p class="cc-group-help">Members can see the messages and other members of groups they join. No public group search.</p>
+    </form>
+  </dialog>
+  <dialog id="groupManageDialog" class="cc-profile-dialog cc-group-dialog" aria-labelledby="groupManageName">
+    <div class="cc-profile-head"><div><small>MEMBERS-ONLY GROUP</small><h2 id="groupManageName">Group info</h2></div><button id="groupManageClose" type="button" class="cc-profile-close" aria-label="Close">✕</button></div>
+    <section class="cc-group-profile-overview" aria-label="Group profile">
+      <div id="groupPhotoPlaceholder" class="cc-group-photo-placeholder" aria-hidden="true">👥</div>
+      <img id="groupPhotoPreview" alt="Private group photo" class="cc-group-photo-preview" hidden>
+      <div class="cc-group-profile-meta"><strong id="groupProfileTitle">Group</strong><p id="groupDescriptionView">No description yet.</p></div>
+    </section>
+    <p id="groupOwnerName" class="cc-group-owner"></p>
+    <button id="groupMuteToggle" type="button" class="cc-group-mute-toggle">🔕 Mute this group</button>
+    <form id="groupDescriptionForm" class="cc-group-metadata-form" hidden>
+      <label for="groupDescriptionInput">Group description <small>(owner only)</small></label>
+      <textarea id="groupDescriptionInput" rows="3" maxlength="240" placeholder="What's this group about?"></textarea>
+      <button type="submit" id="groupDescriptionSave">Save description</button>
+    </form>
+    <form id="groupPhotoForm" class="cc-group-metadata-form" hidden>
+      <label for="groupPhotoFile">Group photo <small>(owner only · JPEG/PNG/WebP · converted to compact JPEG)</small></label>
+      <input type="file" id="groupPhotoFile" accept="image/jpeg,image/png,image/webp">
+      <div class="cc-group-photo-actions"><button type="submit" id="groupPhotoSave">Upload photo</button><button type="button" id="groupPhotoRemove">Remove photo</button></div>
+    </form>
+    <form id="groupRenameForm" class="cc-group-rename-form" hidden>
+      <label for="groupRenameName">Rename group <small>(owner only)</small></label>
+      <div class="cc-group-rename-row"><input id="groupRenameName" maxlength="64" minlength="3" required placeholder="Group name"><button id="groupRenameSubmit" type="submit">Save name</button></div>
+    </form>
+    <strong>Members</strong><div id="groupMembers" class="cc-group-members"></div>
+    <form id="groupInviteForm">
+      <label>Invite more friends <small>(owner only)</small></label>
+      <div id="groupManageFriends" class="cc-group-choices"></div>
+      <button id="groupSendInvites" type="submit" class="cc-profile-save">Send invitations</button>
+    </form>
+    <p id="groupManageFeedback" role="alert"></p>
+    <div class="cc-group-danger-actions"><button id="groupMemberLeave" type="button" hidden>Leave group</button><button id="groupOwnerDelete" type="button" hidden>Delete group for everyone</button></div>
+  </dialog>
+  <!-- Private same-page photo viewer; no public photo URL and no new server routes. -->
+  <dialog id="ccPhotoDialog" class="cc-photo-dialog" aria-labelledby="ccPhotoName">
+    <div class="cc-photo-frame">
+      <header class="cc-photo-top">
+        <span class="cc-photo-brand">📸 PHOTO VIEWER</span>
+        <strong id="ccPhotoName">Photo</strong>
+        <button type="button" id="ccPhotoClose" class="cc-photo-close" aria-label="Close photo viewer" title="Close (Esc)">✕</button>
+      </header>
+      <div id="ccPhotoViewport" class="cc-photo-viewport" aria-label="Full-size image viewport">
+        <img id="ccPhotoImage" alt="Expanded photo" hidden>
+      </div>
+      <footer class="cc-photo-toolbar">
+        <span id="ccPhotoFeedback" role="status">Loading private photo…</span>
+        <div class="cc-photo-buttons">
+          <button type="button" id="ccPhotoZoomOut" title="Zoom out" aria-label="Zoom out">−</button>
+          <span id="ccPhotoZoomLabel" aria-live="polite">100%</span>
+          <button type="button" id="ccPhotoZoomIn" title="Zoom in" aria-label="Zoom in">+</button>
+          <button type="button" id="ccPhotoZoomReset" title="Reset zoom">Reset</button>
+          <button type="button" id="ccPhotoDownload" class="cc-photo-download" title="Save original file">↓ Download</button>
+        </div>
+      </footer>
+    </div>
+  </dialog>
+  <script src="/cc-emoji-data.js"></script>
+  <script src="/app.js"></script>
+  <script src="/cc-voice-emoji.js"></script></body></html>
+
