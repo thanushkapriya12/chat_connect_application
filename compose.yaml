@@ -1,0 +1,52 @@
+name: chatconnect20test
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: chatconnect
+      POSTGRES_USER: chatconnect
+      POSTGRES_PASSWORD: ${CHATCONNECT_DB_PASSWORD:-local-dev-only-change-me}
+    volumes:
+      - chatconnect_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U chatconnect -d chatconnect"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    security_opt:
+      - no-new-privileges:true
+  chatconnect:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: chatconnect-cpp:true20-test
+    restart: unless-stopped
+    init: true
+    ports:
+      - "${CHATCONNECT_BIND_IP:-127.0.0.1}:${CHATCONNECT_HOST_PORT:-8085}:8085"
+    environment:
+      PGHOST: db
+      PGPORT: "5432"
+      PGDATABASE: chatconnect
+      PGUSER: chatconnect
+      PGPASSWORD: ${CHATCONNECT_DB_PASSWORD:-local-dev-only-change-me}
+    depends_on:
+      db:
+        condition: service_healthy
+    read_only: true
+    volumes:
+      - chatconnect_media:/app/uploads
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "--show-error", "http://127.0.0.1:8085/health"]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+volumes:
+  chatconnect_pgdata:
+  chatconnect_media:

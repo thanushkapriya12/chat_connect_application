@@ -1,0 +1,26 @@
+# Local secrets and build output
+.env
+.env.*
+!.env.example
+build/
+.vscode/
+*.exe
+*.obj
+*.o
+*.log
+ChatConnectWeb
+ChatConnectTests
+*.zip
+*_Backups/
+*_Backup_*/
+*.bak
+*.backup-*
+*.sql
+*.dump
+*.db
+*.sqlite*
+*.pem
+*.key
+*.p12
+exports/
+__pycache__/
